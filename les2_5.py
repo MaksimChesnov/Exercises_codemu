@@ -38,6 +38,17 @@ print(f'{str2}', lst2)
 
 lst3 = [1, 2, 3, 4, 5, 6]
 
+s_chet = 0
+s_nechet = 0
+for i in lst3:
+    ostatok = i % 2
+    if ostatok == 0:
+        s_chet += i
+    else:
+        s_nechet += i
+
+print (f'{s_chet}/{s_nechet}=', s_chet/s_nechet)
+
 #4Дана дата в следующем формате: ['2025', '12', '31'] Преобразуйте эту дату в следующий кортеж: ('31', '12', '2025')
 
 lst_date4 = ['2025', '12', '31']
