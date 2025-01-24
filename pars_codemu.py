@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 url = 'https://code.mu/ru/python/tasker/stager/'
 level = '2'
-task = '7'
+task = '10'
 delim = '/'
 
 url_full = url+level+delim+task+delim
