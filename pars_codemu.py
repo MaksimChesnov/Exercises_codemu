@@ -3,8 +3,9 @@ from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 
 url = 'https://code.mu/ru/python/tasker/stager/'
-level = '2'
-task = '10'
+level = input('Уровень задачи: ')
+task = input('Номер задачи: ')
+#qua_task = input('Сколько задач создать? ')
 delim = '/'
 
 url_full = url+level+delim+task+delim
@@ -27,9 +28,10 @@ html = req1.content
 soup = BeautifulSoup(html, 'html.parser')
 #print (soup)
 
-print(soup.html.head.title)
-print(soup.html.head.title.text)
+#print(soup.html.head.title)
+#print(soup.html.head.title.text)
 
+#for i in range(task, qua_task):
 
 file_name = (f'les{level}_{task}.py')
 path = '/home/user/Projects/Exercices/'
@@ -40,5 +42,9 @@ file.close()
 #Можно докрутить так, чтобы можно было задать, например, скачай 5 задач. Программа скачивает и создает 5 файлов
 #При этом, она лезет в путь, где лежат файлы. Считывает их названия. Анализирует. Берет самый большой и прибавляет 1.
 #Можно функцию отдельную написать.
+
+#Доступ заблокировали, 403
+#Так даже интереснее.
+#Надо найти еще справочник и сразу выкачать его весь. 
 
 
