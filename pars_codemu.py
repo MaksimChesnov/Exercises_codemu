@@ -2,6 +2,13 @@ import requests as req
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 
+def checkIP():
+    ip = req.get('http://checkip.dyndns.org').content
+    soup = BeautifulSoup(ip, 'html.parser')
+    print(soup.find('body').text)
+
+checkIP()
+
 url = 'https://code.mu/ru/python/tasker/stager/'
 level = input('Уровень задачи: ')
 task = input('Номер задачи: ')
@@ -46,5 +53,6 @@ file.close()
 #Доступ заблокировали, 403
 #Так даже интереснее.
 #Надо найти еще справочник и сразу выкачать его весь. 
+
 
 
