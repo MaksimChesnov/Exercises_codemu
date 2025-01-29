@@ -1,6 +1,6 @@
 #1 Дана некоторая строка с буквами и цифрами. Получите список позиций всех цифр из этой строки.
 
-str1 = 'fucks 83 sluts 9873222 ahaha'
+str1 = 'Create and test 8933 a Python package on multiple Python versions.'
 lst1 = []
 end = len(str1)
 for i in range(end):
