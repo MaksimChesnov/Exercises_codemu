@@ -13,3 +13,9 @@
 
 lst1 = [1, 2, 3]
 lst2 = [1, 2, 3, 4, 5]
+for i, j in zip(lst1, lst2):
+    print (i, j)
+    if i == j:
+        lst2.remove(j)
+
+print (lst2)
