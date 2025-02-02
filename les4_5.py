@@ -1,9 +1,16 @@
 #1Выведите в консоль все числа в промежутке от 10 до 1000, у которых предпоследняя цифра четная.
 
+for i in range(10, 1001):
+    num = str(i)
+    ost = int(num[-2]) % 2
+    if ost == 0 and int(num[-2]) > 0:
+        print(i)
+
 #2Дана строка:
 #Разбейте эту строку в список так, чтобы каждая непустая линия текста стала отдельным элементом списка:
 #['text1','text2','text3','text4','text5']
 
+#print ('\n')
 str1 = '''
 	text1
 	text2
@@ -11,11 +18,8 @@ str1 = '''
 	text4
 	text5
 '''
-lst1 = ",".join(str1)
+lst1 = str1.split()
 print(lst1)
-
-
-
 
 #3 Дан следующий словарь:
 #Найдите сумму элементов этого словаря.
@@ -57,3 +61,14 @@ dct = {
 		}
 	}
 }
+
+s = 0
+for i in dct.values():
+    #print (i)
+    for j in i.values():
+        #print(j)
+        for k in j.values():
+            #print(k)
+            s += k
+
+print(s)
