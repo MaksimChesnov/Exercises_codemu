@@ -8,18 +8,22 @@ import re
 	[7, 8, 9]
 ]
 '''
-
-lst1 = []
-for i in range(1,4):
-    lst2 = []
-    lst1.append(i)
-    for j in range(1,4):
-        lst2.append(lst1)
-        
-print(lst2)
+#Не осилил пока. Задача хорошая.
 
 lst1 = [[i for i in range(1,4)] for j in range(1,4)]
 print(lst1)
+
+end = len(lst1)
+
+for i in range(end):
+	print (i, lst1[i])
+	if i > 0:
+		for j in lst1[i]:
+			print(j+3)
+
+print(lst1)
+
+
 
 #2 Дан текст
 #Разбейте эту строку в словарь следующим образом
@@ -43,8 +47,22 @@ txt = '''
 '''
 print(txt)
 
-lst = re.split("\n|\t|'-'", txt)
-lst = [i.replace('-', ':') for i in lst if i]
-print(lst)
+lst = txt.split()
+end = len(lst)
+keys = []
+val = []
+for i in range(end):
+	#print (i, lst[i])
+	end2 = len(lst[i])
+	for j in range(end2):
+		#print(j, lst[i][j])
+		if lst[i][j].isdigit():
+			val.append(lst[i][j])
+		elif lst[i][j].isalpha():
+			keys.append(lst[i][j])
+
+dct = dict(zip(keys, val))
+print(keys, val)
+print (dct)
 
 
